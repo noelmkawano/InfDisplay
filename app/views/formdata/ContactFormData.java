@@ -11,8 +11,6 @@ import java.util.List;
  */
 public class ContactFormData {
 
-  private static final int MAX_TELEPHONE_DIGITS = 12;
-
   /**
    * Input data id hidden field.
    */
@@ -22,21 +20,6 @@ public class ContactFormData {
    * Input data first name field.
    */
   public String firstName = "";
-
-  /**
-   * Input data last name field.
-   */
-  public String lastName = "";
-
-  /**
-   * Input data telephone field.
-   */
-  public String telephone = "";
-
-  /**
-   * Input data Telephone Type.
-   */
-  public String telephoneType = "";
 
   /**
    * Input diet Type string.
@@ -58,26 +41,16 @@ public class ContactFormData {
   public ContactFormData(Contact contact) {
     this.id = contact.getId();
     this.firstName = contact.getFirstName();
-    this.lastName = contact.getLastName();
-    this.telephone = contact.getTelephone();
-    this.telephoneType = contact.getTelephoneType();
     this.dietTypes = contact.getDietTypes();
   }
 
   /**
    * Testing Initialization constructor, does not include ID.
    * @param firstName The First Name.
-   * @param lastName The Last Name.
-   * @param telephone The telephone number.
-   * @param telephoneType The type of telephone.
    * @param dietTypes The selected Diet Types.
    */
-  public ContactFormData(String firstName, String lastName, String telephone, String telephoneType,
-                         List<String> dietTypes) {
+  public ContactFormData(String firstName, List<String> dietTypes) {
     this.firstName = firstName;
-    this.lastName = lastName;
-    this.telephone = telephone;
-    this.telephoneType = telephoneType;
     this.dietTypes = dietTypes;
   }
 
@@ -92,18 +65,6 @@ public class ContactFormData {
     List<ValidationError> errors = new ArrayList<>();
     if (firstName == null || firstName.length() == 0) {
       errors.add(new ValidationError("firstName", "A First Name must be provided."));
-    }
-    if (lastName == null || lastName.length() == 0) {
-      errors.add(new ValidationError("lastName", "A Last Name must be provided."));
-    }
-    if (telephone == null || telephone.length() == 0) {
-      errors.add(new ValidationError("telephone", "A telephone number must be provided."));
-    }
-    if ((telephone != null) && (telephone.length() != MAX_TELEPHONE_DIGITS)) {
-      errors.add(new ValidationError("telephone", "Telephone number must be of the format xxx-xxx-xxxx."));
-    }
-    if (!TelephoneTypes.isType(telephoneType)) {
-      errors.add(new ValidationError("telephoneType", "Please select a telephone type from the list."));
     }
     for (String diet : dietTypes) {
       if (!DietTypes.isType(diet)) {

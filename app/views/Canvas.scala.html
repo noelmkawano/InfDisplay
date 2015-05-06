@@ -1,4 +1,4 @@
-@(contactForm: Form[views.formdata.ContactFormData], telephoneTypeMap: Map[String, Boolean], dietMap: Map[String, Boolean])
+@(contactForm: Form[views.formdata.ContactFormData], dietMap: Map[String, Boolean])
 
 @import views.html.bootstrap3._
 @import views.html.helper._
@@ -17,18 +17,6 @@
         label = "First",
         placeholder = "First Name",
         help = "")
-
-        <!-- Last Name -->
-      @text(contactForm("lastName"),
-        label = "Last",
-        placeholder = "Last Name",
-        help = "")
-
-        <!-- Telephone and Telephone Type -->
-      @telephone(contactForm("telephone"),
-        contactForm("telephoneType"),
-        isMultiple = false,
-        optionMap = telephoneTypeMap)
 
         <!-- Checkboxes -->
       <div class="display" >

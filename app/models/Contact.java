@@ -8,9 +8,6 @@ import java.util.List;
 public class Contact {
   private long id;
   private String firstName;
-  private String lastName;
-  private String telephone;
-  private String telephoneType;
   private List<String> dietTypes;
 
 
@@ -19,19 +16,12 @@ public class Contact {
    *
    * @param id            the id value.
    * @param firstName     the user first name.
-   * @param lastName      the user last name.
-   * @param telephone     the user telephone number.
-   * @param telephoneType the user telephone type.
    * @param dietTypes     A list of dietary preferences.
    */
-  public Contact(long id, String firstName, String lastName, String telephone, String telephoneType,
-                 List<String> dietTypes) {
+  public Contact(long id, String firstName, List<String> dietTypes) {
 
     this.id = id;
     this.firstName = firstName;
-    this.lastName = lastName;
-    this.telephone = telephone;
-    this.telephoneType = telephoneType;
     this.dietTypes = dietTypes;
   }
 
@@ -51,33 +41,6 @@ public class Contact {
    */
   public String getFirstName() {
     return firstName;
-  }
-
-  /**
-   * Returns the last name value to the caller.
-   *
-   * @return lastName String.
-   */
-  public String getLastName() {
-    return lastName;
-  }
-
-  /**
-   * Returns the telephone number value to the caller.
-   *
-   * @return telephone String.
-   */
-  public String getTelephone() {
-    return telephone;
-  }
-
-  /**
-   * Returns the telephone type value to the caller.
-   *
-   * @return Telephone type string.
-   */
-  public String getTelephoneType() {
-    return telephoneType;
   }
 
   /**

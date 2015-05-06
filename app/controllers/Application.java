@@ -6,7 +6,6 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import views.formdata.ContactFormData;
 import views.formdata.DietTypes;
-import views.formdata.TelephoneTypes;
 import views.html.Index;
 import views.html.Live;
 import views.html.Canvas;
@@ -49,9 +48,8 @@ public class Application extends Controller {
   public static Result newContact(long id) {
     ContactFormData data = (id == 0) ? new ContactFormData() : new ContactFormData(ContactDB.getContact(id));
     Form<ContactFormData> formData = Form.form(ContactFormData.class).fill(data);
-    Map<String, Boolean> telephoneTypeMap = TelephoneTypes.getTypes(data.telephoneType);
     Map<String, Boolean> dietTypes = DietTypes.getDietTypes(data.dietTypes);
-    return ok(Canvas.render(formData, telephoneTypeMap, dietTypes));
+    return ok(Canvas.render(formData, dietTypes));
   }
 
   /**
@@ -63,15 +61,14 @@ public class Application extends Controller {
     Form<ContactFormData> formData = Form.form(ContactFormData.class).bindFromRequest();
     if (formData.hasErrors()) {
       System.out.println("HTTP Form Error.");
-      return badRequest(Canvas.render(formData, TelephoneTypes.getTypes(), DietTypes.getDietTypes()));
+      return badRequest(Canvas.render(formData, DietTypes.getDietTypes()));
     }
     else {
       ContactFormData data = formData.get();
       ContactDB.addContacts(data);
-      System.out.printf("HTTP OK; Form Data:  %s, %s, %s, %s %n", data.firstName, data.lastName, data.telephone,
-          data.telephoneType);
+      System.out.printf("HTTP OK; Form Data:  %s, %n", data.firstName);
       System.out.println(data.dietTypes);
-      return badRequest(Canvas.render(formData, TelephoneTypes.getTypes(), DietTypes.getDietTypes()));
+      return badRequest(Canvas.render(formData, DietTypes.getDietTypes()));
   }
   }
 }
