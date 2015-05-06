@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - infdisplay@localhost" uuid="000cd004-50b2-489a-bdde-ed1d5e5c8caa">
+      <secret-storage>master_key</secret-storage>
+      <user-name>NOEL</user-name>
+      <schema-pattern>infdisplay.pg_catalog infdisplay.public</schema-pattern>
+      <default-schemas>infdisplay.pg_catalog infdisplay.public</default-schemas>
+    </data-source>
+  </component>
+</project>

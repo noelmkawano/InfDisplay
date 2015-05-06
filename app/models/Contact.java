@@ -1,29 +1,44 @@
 package models;
 
+import play.db.ebean.Model;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * A contact object that holds a First Name, Last Name, and Telephone Number.
  */
-public class Contact {
+@Entity
+public class Contact extends Model {
+  @Id
   private long id;
   private String firstName;
+  @ManyToMany(cascade = CascadeType.PERSIST)
   private List<DietType> dietTypes;
 
 
   /**
    * Create new Contact object.
    *
-   * @param id            the id value.
    * @param firstName     the user first name.
    * @param dietTypes     A list of dietary preferences.
    */
-  public Contact(long id, String firstName, List<DietType> dietTypes) {
+  public Contact(String firstName, List<DietType> dietTypes) {
 
-    this.id = id;
     this.firstName = firstName;
     this.dietTypes = dietTypes;
+  }
+
+  /**
+   * The EBean ORM finder method for database queries.
+   * @return The finder method for Contacts.
+   */
+  public static Finder<Long, Contact> find() {
+    return new Finder<Long, Contact>(Long.class, Contact.class);
   }
 
   /**
