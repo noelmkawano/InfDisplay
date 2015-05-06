@@ -37,13 +37,6 @@ body {
   padding: 10px 10px;
 }
 
-.display {
-  max-width: 715px;
-  padding-left: 100px;
-  padding-right: 100px;
-
-}
-
 .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -51,5 +44,22 @@ body {
 
 .btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
   border-top-right-radius: 0;
-  border-bottom-right-radius: 0%;
+  border-bottom-right-radius: 0;
+}
+
+.confine {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.display {
+  max-width: 525px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.confine2 {
+  margin-left: auto;
+  margin-right: auto;
 }
