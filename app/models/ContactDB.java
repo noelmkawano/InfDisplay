@@ -13,6 +13,7 @@ import java.util.Map;
 public class ContactDB {
 
   private static Map<Long, Contact> contacts = new HashMap<>();
+  private static Map<String, DietType> dietTypes = new HashMap<>();
   private static long currentId = 1;
 
   /**
@@ -22,8 +23,34 @@ public class ContactDB {
    */
   public static void addContacts(ContactFormData formData) {
     long idVal = (formData.id == 0) ? currentId++ : formData.id;
-    Contact contactFromForm = new Contact(idVal, formData.firstName, formData.dietTypes);
+
+    List<DietType> dietTypes = new ArrayList<>();
+    for (String dietString : formData.dietTypes) {
+      dietTypes.add(getDietType(dietString));
+      }
+    Contact contactFromForm = new Contact(idVal, formData.firstName, dietTypes);
     contacts.put(idVal, contactFromForm);
+  }
+
+  /**
+   * Updates db with a new diet type.
+   * @param dietType The diet type to add.
+   */
+  public static void addDietType(DietType dietType) {
+    dietTypes.put(dietType.getDietType(), dietType);
+  }
+
+  /**
+   * Returns the DietType associated with type string, or throws RuntimeException if not found.
+   * @param typeString The type string.
+   * @return The instance if found.
+   */
+  public static DietType getDietType(String typeString) {
+    DietType dietType = dietTypes.get(typeString);
+    if (dietType == null) {
+      throw new RuntimeException("Illegal diet type" + typeString);
+    }
+    return dietType;
   }
 
   /**

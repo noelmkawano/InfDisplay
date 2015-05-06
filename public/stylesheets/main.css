@@ -63,3 +63,12 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+table {
+  background-color: transparent;
+}
+
+.btn-warning {
+  background-color: #18bc9c;
+  border-color: #18bc9c;
+}

@@ -1,7 +1,24 @@
-@(message: String)
+@(contacts: List[Contact])
 
 @Main("Live") {
-  <div class="container">
-    <p>The fire</p>
+  <div class="space"></div>
+  <div class="shade">
+    <div class="container">
+    <h1>Live Feed</h1>
+    <table class="table table-bordered">
+        <tr>
+          <th>User</th>
+          <th>Array</th>
+        </tr>
+
+      @for(contact <- contacts) {
+        <tr>
+          <td>@contact.getFirstName</td>
+          <td>@contact.getDietTypesString</td>
+          <td><a href="@routes.Application.newContact(contact.getId)" class="btn btn-warning btn-xs" role="button">Edit</a></td>
+        </tr>
+      }
+    </table>
+  </div>
   </div>
 }

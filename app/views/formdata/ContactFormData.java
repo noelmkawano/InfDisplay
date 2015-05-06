@@ -41,7 +41,7 @@ public class ContactFormData {
   public ContactFormData(Contact contact) {
     this.id = contact.getId();
     this.firstName = contact.getFirstName();
-    this.dietTypes = contact.getDietTypes();
+    this.dietTypes = contact.getDietTypesList();
   }
 
   /**

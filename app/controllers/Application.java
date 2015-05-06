@@ -33,7 +33,7 @@ public class Application extends Controller {
    * @return The Live.
    */
   public static Result live() {
-    return ok(Live.render("Welcome to live."));
+    return ok(Live.render(ContactDB.getContacts()));
 
   }
 
