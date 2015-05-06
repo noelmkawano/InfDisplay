@@ -35,9 +35,7 @@
 
 
 
-    <div class="btn-group" data-toggle="checkbox">
-      <label class="col-sm-2 control-label" for="@contactForm("dietTypes").id"></label>
-      <div class="col-sm-10" id="@contactForm("dietTypes").id">
+    <div class="btn-group" data-toggle="checkboxes">
     @for((checkboxName, isChecked) <- dietMap) {
       <label class="btn btn-primary">
         <input type="checkbox"
@@ -47,7 +45,6 @@
         @if(isChecked) {checked}>
       </label>
     }
-    </div>
     </div>
 
 
