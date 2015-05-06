@@ -1,61 +1,58 @@
 @(contactForm: Form[views.formdata.ContactFormData], telephoneTypeMap: Map[String, Boolean], dietMap: Map[String, Boolean])
 
 @import views.html.bootstrap3._
-@import helper._
+@import views.html.helper._
 
 @Main("Canvas") {
   <div class="container">
     <div class="space"></div>
-  @form(routes.Application.postContact(), 'class -> "form-horizontal") {
-    <input type="hidden"
-    name="@contactForm("id").name"
-    id="@contactForm("id").id"
-    value="@contactForm("id").value"/>
-      <!--<form class="form-horizontal">-->
-      <!-- First Name -->
-    @text(contactForm("firstName"),
-      label = "First",
-      placeholder = "First Name",
-      help = "")
+    @form(routes.Application.postContact(), 'class -> "form-horizontal") {
+      <input type="hidden"
+      name="@contactForm("id").name"
+      id="@contactForm("id").id"
+      value="@contactForm("id").value"/>
+        <!--<form class="form-horizontal">-->
+        <!-- First Name -->
+      @text(contactForm("firstName"),
+        label = "First",
+        placeholder = "First Name",
+        help = "")
 
-      <!-- Last Name -->
-    @text(contactForm("lastName"),
-      label = "Last",
-      placeholder = "Last Name",
-      help = "")
+        <!-- Last Name -->
+      @text(contactForm("lastName"),
+        label = "Last",
+        placeholder = "Last Name",
+        help = "")
 
-      <!-- Telephone and Telephone Type -->
-    @telephone(contactForm("telephone"),
-      contactForm("telephoneType"),
-      isMultiple = false,
-      optionMap = telephoneTypeMap)
+        <!-- Telephone and Telephone Type -->
+      @telephone(contactForm("telephone"),
+        contactForm("telephoneType"),
+        isMultiple = false,
+        optionMap = telephoneTypeMap)
 
-      <!-- Checkboxes -->
-
-
-    </div>
-
-  <div class="display" >
-    <div class="btn-group" data-toggle="checkboxes">
-    @for((checkboxName, isChecked) <- dietMap) {
-      <label class="btn btn-primary">
-        <input type="checkbox"
-        name="@(contactForm("dietTypes").name + "[]")"
-        id="@checkboxName"
-        value="@checkboxName"
-        @if(isChecked) {checked}>
-      </label>
-    }
-    </div>
-  </div>
-
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <button id="submit" type="submit" class="btn btn-default">Submit</button>
+        <!-- Checkboxes -->
+      <div class="display" >
+        <div class="btn-group" data-toggle="buttons">
+        @for((checkboxName, isChecked) <- dietMap) {
+          <label class="btn btn-primary">
+            <input type="checkbox"
+            name="@(contactForm("dietTypes").name + "[]")"
+            id="@checkboxName"
+            value="@checkboxName"
+            @if(isChecked) {checked}>
+          </label>
+        }
+        </div>
       </div>
     </div>
-      <!--</form>-->
-  }
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button id="submit" type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+  <!--</form>-->
+}
 
   </div>
 }

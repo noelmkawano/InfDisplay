@@ -34,10 +34,22 @@ body {
 }
 
 .btn {
-  padding: 7px 10px;
+  padding: 10px 10px;
 }
 
 .display {
-  padding-left: 300px;
-  max-width: 825px;
+  max-width: 715px;
+  padding-left: 100px;
+  padding-right: 100px;
+
+}
+
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0%;
 }
