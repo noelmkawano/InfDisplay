@@ -31,10 +31,22 @@
       optionMap = telephoneTypeMap)
 
       <!-- Checkboxes -->
-    @checkboxes(contactForm("dietTypes"),
-      label="Diet",
-      checkboxMap = dietMap,
-      help = "")
+
+
+    <div class="btn-group @if(contactForm("dietTypes").hasErrors) {has-error}" data-toggle="buttons">
+    @for((checkboxName, isChecked) <- dietMap) {
+      <label class="btn btn-primary">
+        <input type="checkbox" autocomplete="off"
+        name="@contactForm("dietTypes").name + "[]""
+        id="@contactForm("dietTypes").id"
+        value="@contactForm("dietTypes").value"
+        @if(isChecked) {checked}> Checkbox 1
+      </label>
+    }
+
+    </div>
+
+
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
