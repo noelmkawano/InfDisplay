@@ -71,8 +71,7 @@ public class Application extends Controller {
       System.out.printf("HTTP OK; Form Data:  %s, %s, %s, %s %n", data.firstName, data.lastName, data.telephone,
           data.telephoneType);
       System.out.println(data.dietTypes);
-      return ok(Canvas.render(formData, TelephoneTypes.getTypes(data.telephoneType),
-          DietTypes.getDietTypes(data.dietTypes)));
+      return badRequest(Canvas.render(formData, TelephoneTypes.getTypes(), DietTypes.getDietTypes()));
   }
   }
 }
