@@ -73,6 +73,6 @@ public class Application extends Controller {
       System.out.println(data.dietTypes);
       return ok(Canvas.render(formData, TelephoneTypes.getTypes(data.telephoneType),
           DietTypes.getDietTypes(data.dietTypes)));
-    }
+  }
   }
 }

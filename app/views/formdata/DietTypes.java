@@ -9,7 +9,9 @@ import java.util.Map;
  */
 public class DietTypes {
 
-  private static String[] types = {"Chicken", "Fish", "Beef", "Dairy", "Gluten"};
+  private static String[] types = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+                                   "10", "11", "12", "13", "14", "15", "16", "17", "18", "19",
+                                   "20", "21", "22", "23"};
 
   /**
    * Generates a new Map of types with all type pairs set to false.

@@ -1,0 +1,19 @@
+@(field: Field, label: String = "CHANGEME", checkboxMap: Map[String, Boolean], help:String = "")
+
+  <div class="btn-group @if(field.hasErrors) {has-error}" data-toggle="checkbox">
+    <div class="col-sm-12" id="@field.id">
+      @for((checkboxName, isChecked) <- checkboxMap) {
+        <label class="btn btn-primary">
+          <input
+            type="checkbox"
+            autocomplete="off"
+            name="@(field.name + "[]")"
+            id="@checkboxName"
+            value="@checkboxName"
+            @if(isChecked) {checked}>
+        </label>
+      }
+      <span class="help-block">@help</span>
+      <span class="help-block">@{field.error.map { error => error.message }}</span>
+    </div>
+  </div>
