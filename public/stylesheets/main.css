@@ -1,3 +1,23 @@
 body {
-  padding-top: 70px;  /* Move body of page below navbar. */
+  background-image: url('../images/white.jpg');
+  background-size: cover;
+  color: white;
 }
+
+.navbar {
+  margin-bottom: 0;
+  background-image: none;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.space{
+  padding-top: 300px;
+}
+
+.shade {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
