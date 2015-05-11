@@ -68,7 +68,7 @@ public class Application extends Controller {
       ContactDB.addContacts(data);
       System.out.printf("HTTP OK; Form Data:  %s, %n", data.firstName);
       System.out.println(data.dietTypes);
-      return badRequest(Canvas.render(formData, DietTypes.getDietTypes()));
+      return ok(Canvas.render(formData, DietTypes.getDietTypes()));
   }
   }
 }

@@ -98,7 +98,7 @@ public class Contact extends Model {
   public String getDietTypesString() {
     String diets = "";
     for (DietType diet : dietTypes) {
-      diets += diet.getDietType() + ",";
+      diets += diet.getDietType();
     }
     return diets.substring(0, (diets.length() == 0 ? 0 : (diets.length() - 1)));
     }
