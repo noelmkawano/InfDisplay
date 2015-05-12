@@ -76,3 +76,19 @@ table {
 h1 {
   text-align: center;
 }
+
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
+  background-color: white;
+  border-color: white;
+}
+
+.btn-primary {
+  background-color: black;
+  border-color: #18bc9c;
+}
+
+.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {
+  color: black;
+  background-color: #18bc9c;
+  border-color: #18bc9c;
+}
