@@ -63,7 +63,7 @@ public class ContactFormData {
   public List<ValidationError> validate() {
 
     List<ValidationError> errors = new ArrayList<>();
-    if (firstName == null || firstName.length() == 0) {
+    if (!firstName.equals("ics613s15") || firstName == null || firstName.length() == 0) {
       errors.add(new ValidationError("firstName", "A First Name must be provided."));
     }
     for (String diet : dietTypes) {
