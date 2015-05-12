@@ -34,7 +34,8 @@ body {
 }
 
 .btn {
-  padding: 10px 10px;
+  max-width: 50px;
+  max-height: 50px;
 }
 
 .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
@@ -54,7 +55,7 @@ body {
 }
 
 .display {
-  max-width: 820px;
+  max-width: 1025px;
   margin-left: auto;
   margin-right: auto;
 }

@@ -17,8 +17,8 @@
     <div class="confine">
     <div class="col-sm-8">
     @text(contactForm("firstName"),
-      label = "Password",
-      placeholder = "ics613s15",
+      label = "",
+      placeholder = "Enter Password",
       help = "")
     </div>
       <div class="col-sm-4">
@@ -28,7 +28,7 @@
 
       <!-- Checkboxes -->
     <div class="display" >
-      <div class="btn-group" data-toggle="checkboxes">
+      <div class="btn-group" data-toggle="buttons">
       @for((checkboxName, isChecked) <- dietMap) {
         <label class="btn btn-primary">
           <input type="checkbox"
@@ -36,7 +36,7 @@
           id="@checkboxName"
           value="@checkboxName"
           @if(isChecked) {checked}>
-
+          @checkboxName
         </label>
       }
       </div>
