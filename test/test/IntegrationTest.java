@@ -26,9 +26,6 @@ public class IntegrationTest {
         browser.goTo("http://localhost:3333");
         assertThat(browser.pageSource()).contains("Home");
 
-        browser.goTo("http://localhost:3333/live");
-        assertThat(browser.pageSource()).contains("Live");
-
         browser.goTo("http://localhost:3333/canvas");
         assertThat(browser.pageSource()).contains("Canvas");
       }

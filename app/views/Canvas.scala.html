@@ -28,7 +28,7 @@
 
       <!-- Checkboxes -->
     <div class="display" >
-      <div class="btn-group" data-toggle="buttons">
+      <div class="btn-group" data-toggle="checkboxes">
       @for((checkboxName, isChecked) <- dietMap) {
         <label class="btn btn-primary">
           <input type="checkbox"
@@ -36,6 +36,7 @@
           id="@checkboxName"
           value="@checkboxName"
           @if(isChecked) {checked}>
+
         </label>
       }
       </div>
