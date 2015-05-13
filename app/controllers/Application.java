@@ -21,21 +21,18 @@ public class Application extends Controller {
 
   /**
    * Returns the home page.
-   *
    * @return The resulting home page.
    */
   public static Result index() {
     return ok(Index.render("Welcome to the home page."));
-
   }
 
   /**
    * Returns the theory page.
-   * @return The resulting theory pag.
+   * @return The resulting theory page.
    */
   public static Result theory() {
     return ok(Theory.render("Welcome to the home page."));
-
   }
 
   /**
