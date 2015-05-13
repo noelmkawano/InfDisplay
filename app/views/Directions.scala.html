@@ -6,7 +6,17 @@
     <div class="shade">
       <div class="container">
         <h2>Directions</h2>
-        <p>This is how you use the web controller to manipulate the Infinity Display</p>
+        <p>This web app controls each of the 576 LEDs on the Infinity Display with a virtual canvas. The user will animate a frame, input a password, and submit the frame to the display. Each accepted submittal is added/combined from the previous frames and pushed to the display. The current version allows for one preset color (white) and all frames are wiped after 60 seconds.</p>
+        <h2>Step 1: The Canvas</h2>
+        <p>Users can access the canvas page through the home page, navbar, or this url, www.infdisplay.com/canvas</p>
+
+        <h2>Step 2: Animating Frames</h2>
+        <p>Users can click (for computers) or tap (for mobile) the array of boxes to switch the LEDs on or off. Black boxes represent an off LED, white represents a lit LED.</p>
+
+        <h2>Step 3: Submittal</h2>
+        <p>Users can submit their frames by entering the correct password and clicking the submit button at the top of the virtual canvas. The purpose of the password is to protect the display from any third party user from spamming. Ideally venues would release the password to significant customers.</p>
+        <p>Current Password: ics613s15</p>
+        <p>Additional information on the hardware specs can be found in the GitHub Users Guide. Click the button below to start playing with the virtual canvas.</p>
         <button class="btn btn-default" type="button"><a href="@routes.Application.newContact()">Canvas</a></button>
       </div>
     </div>
