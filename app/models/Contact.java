@@ -24,8 +24,8 @@ public class Contact extends Model {
   /**
    * Create new Contact object.
    *
-   * @param firstName     the user first name.
-   * @param dietTypes     A list of dietary preferences.
+   * @param firstName the user first name.
+   * @param dietTypes A list of dietary preferences.
    */
   public Contact(String firstName, List<DietType> dietTypes) {
 
@@ -35,6 +35,7 @@ public class Contact extends Model {
 
   /**
    * The EBean ORM finder method for database queries.
+   *
    * @return The finder method for Contacts.
    */
   public static Finder<Long, Contact> find() {
@@ -43,6 +44,7 @@ public class Contact extends Model {
 
   /**
    * Sets the id.
+   *
    * @param id The id.
    */
   public void setId(long id) {
@@ -51,6 +53,7 @@ public class Contact extends Model {
 
   /**
    * Sets the first name.
+   *
    * @param firstName The first name.
    */
   public void setFirstName(String firstName) {
@@ -59,6 +62,7 @@ public class Contact extends Model {
 
   /**
    * Set the diet types.
+   *
    * @param dietTypes The diet types.
    */
   public void setDietTypes(List<DietType> dietTypes) {
@@ -85,6 +89,7 @@ public class Contact extends Model {
 
   /**
    * Returns the diet Type values to the caller.
+   *
    * @return the Diet type value list.
    */
   public List<DietType> getDietTypes() {
@@ -93,6 +98,7 @@ public class Contact extends Model {
 
   /**
    * Returns a single string contains a comma-separated list of diet types.
+   *
    * @return The string containing diet types.
    */
   public String getDietTypesString() {
@@ -101,10 +107,11 @@ public class Contact extends Model {
       diets += diet.getDietType() + ",";
     }
     return diets.substring(0, (diets.length() == 0 ? 0 : (diets.length() - 1)));
-    }
+  }
 
   /**
    * Returns a list of diet type strings.
+   *
    * @return The list of diet type strings.
    */
   public List<String> getDietTypesList() {
@@ -114,5 +121,5 @@ public class Contact extends Model {
     }
     return dietList;
   }
-  }
+}
 

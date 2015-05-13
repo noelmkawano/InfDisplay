@@ -39,6 +39,7 @@ public class ContactDB {
 
   /**
    * Updates db with a new diet type.
+   *
    * @param dietType The diet type to add.
    */
   public static void addDietType(DietType dietType) {
@@ -47,6 +48,7 @@ public class ContactDB {
 
   /**
    * Returns the DietType associated with type string, or throws RuntimeException if not found.
+   *
    * @param typeString The type string.
    * @return The instance if found.
    */

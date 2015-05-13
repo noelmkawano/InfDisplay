@@ -46,6 +46,7 @@ public class ContactFormData {
 
   /**
    * Testing Initialization constructor, does not include ID.
+   *
    * @param firstName The First Name.
    * @param dietTypes The selected Diet Types.
    */

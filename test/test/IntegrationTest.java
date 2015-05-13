@@ -17,7 +17,7 @@ import static play.test.Helpers.testServer;
 public class IntegrationTest {
 
   /**
-   * Check to see that both the index and page1 pages can be retrieved.
+   * Check to see that both the index and canvas pages can be retrieved.
    */
   @Test
   public void test() {

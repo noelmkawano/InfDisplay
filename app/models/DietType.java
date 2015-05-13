@@ -30,6 +30,7 @@ public class DietType extends Model {
 
   /**
    * Get the id.
+   *
    * @return The id.
    */
   public long getId() {
@@ -38,6 +39,7 @@ public class DietType extends Model {
 
   /**
    * Set the id for the dietType.
+   *
    * @param id The new id.
    */
   public void setId(long id) {
@@ -46,6 +48,7 @@ public class DietType extends Model {
 
   /**
    * Gets the diet type.
+   *
    * @return the dietType String.
    */
   public String getDietType() {
@@ -54,6 +57,7 @@ public class DietType extends Model {
 
   /**
    * Set the diet type String.
+   *
    * @param dietType The diet type to set.
    */
   public void setDietType(String dietType) {
@@ -62,6 +66,7 @@ public class DietType extends Model {
 
   /**
    * Gets the list of Contacts.
+   *
    * @return The list of Contacts.
    */
   public List<Contact> getContacts() {
@@ -70,6 +75,7 @@ public class DietType extends Model {
 
   /**
    * Set the list of contacts.
+   *
    * @param contacts The contacts.
    */
   public void setContacts(List<Contact> contacts) {
@@ -78,6 +84,7 @@ public class DietType extends Model {
 
   /**
    * Add the contact.
+   *
    * @param contact the contact.
    */
   public void addContact(Contact contact) {
@@ -86,6 +93,7 @@ public class DietType extends Model {
 
   /**
    * Create a new dietType.
+   *
    * @param dietType The dietType.
    */
   public DietType(String dietType) {

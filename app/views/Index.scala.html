@@ -1,19 +1,20 @@
 @(message: String)
 
-  @Main("Home") {
+@Main("Home") {
 
-    <div class="space"></div>
-    <div class="shade">
-      <div class="tagline text-center">
-        <h1>Infinity Display Web Controller</h1>
-        <div class="confine2">
-        <p>Click one of the navigation buttons below to either learn about the theory/build of the lighting system, directions on how to use the web app, or start playing right away.</p>
-          </div>
-        <button class="btn btn-default" type="button"><a href="@routes.Application.theory()">Theory</a></button>
-        <button class="btn btn-default" type="button"><a href="@routes.Application.directions()">Directions</a></button>
-        <button class="btn btn-default" type="button"><a href="@routes.Application.newContact()">Canvas</a></button>
-
+  <div class="space"></div>
+  <div class="shade">
+    <div class="tagline text-center">
+      <h1>Infinity Display Web Controller</h1>
+      <div class="confine2">
+        <p>
+          Click one of the navigation buttons below to either learn about the theory/build of the lighting system, directions on how to use the web app, or start playing right away.</p>
       </div>
-    </div>
+      <button class="btn btn-default" type="button"><a href="@routes.Application.theory()">Theory</a></button>
+      <button class="btn btn-default" type="button"><a href="@routes.Application.directions()">Directions</a></button>
+      <button class="btn btn-default" type="button"><a href="@routes.Application.newContact()">Canvas</a></button>
 
-  }
+    </div>
+  </div>
+
+}

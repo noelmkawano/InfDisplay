@@ -6,10 +6,10 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import views.formdata.ContactFormData;
 import views.formdata.DietTypes;
+import views.html.Canvas;
 import views.html.Directions;
 import views.html.Index;
 import views.html.Live;
-import views.html.Canvas;
 import views.html.Theory;
 
 import java.util.Map;
@@ -21,6 +21,7 @@ public class Application extends Controller {
 
   /**
    * Returns the home page.
+   *
    * @return The resulting home page.
    */
   public static Result index() {
@@ -29,31 +30,30 @@ public class Application extends Controller {
 
   /**
    * Returns the theory page.
+   *
    * @return The resulting theory page.
    */
   public static Result theory() {
-    return ok(Theory.render("Welcome to the home page."));
+    return ok(Theory.render("Welcome to the theory page."));
   }
 
   /**
    * Returns the directions page.
+   *
    * @return The resulting directions page.
    */
   public static Result directions() {
-    return ok(Directions.render("Welcome to the home page."));
-
+    return ok(Directions.render("Welcome to the directions page."));
   }
 
   /**
-   * Returns Live, a simple example of a second page to illustrate navigation.
+   * Returns the Live page.
    *
-   * @return The Live.
+   * @return The resulting Live page.
    */
   public static Result live() {
     return ok(Live.render(ContactDB.getContacts()));
-
   }
-
 
 
   /**
@@ -86,6 +86,6 @@ public class Application extends Controller {
       System.out.printf("HTTP OK; Form Data:  %s, %n", data.firstName);
       System.out.println(data.dietTypes);
       return ok(Canvas.render(formData, DietTypes.getDietTypes()));
-  }
+    }
   }
 }
