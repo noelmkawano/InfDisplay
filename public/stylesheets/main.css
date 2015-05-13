@@ -17,7 +17,7 @@ body {
 .shade {
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
@@ -75,6 +75,7 @@ table {
 
 h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
@@ -94,5 +95,10 @@ h1 {
 }
 
 a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
   color: black;
 }
