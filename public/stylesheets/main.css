@@ -103,14 +103,7 @@ a:hover {
   color: black;
 }
 
-.picture1 {
-  background-image: url('../images/inf3.jpg');
-}
-
-.picture2 {
-  background-image: url('../images/infmir.jpg');
-}
-
-.picture3 {
-  background-image: url('../images/inf4.jpg');
+img {
+  float: left;
+  margin-right: 25px;
 }

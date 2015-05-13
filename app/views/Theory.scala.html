@@ -1,23 +1,33 @@
 @(message: String)
 
-  @Main("Theory") {
+@Main("Theory") {
 
-    <div class="space"></div>
-    <div class="shade">
+  <div class="space"></div>
+  <div class="shade">
+    <div class="container">
       <div class="container">
         <h2>What is the Infinity Display?</h2>
-        <div class="picture1"></div>
-        <p>The Infinity Display is an intelligent lighting system designed from two concepts, an infinity mirror and a light emitting diode (LED) array. This system takes advantages of low power LED strips which are imbedded in the display’s frame (more on that later). These low power diodes emit a red, green and blue light intensity allowing for any combination of color scheme. Each LED is individually addressable which gives us a variety of patterns that will associate with the various user inputs. For the purposes of expanding the display’s functionality, this web application was created to entice multi-user interaction.</p>
-        <h3>Infinity Mirror</h3>
-        <div class="picture2"></div>
-        <p>An infinity mirror is a common DIY project built on the result of an optical illusion. When two parallel mirrors are facing each other the light between them is reflected infinitely (sort of). This illusion can be found in most bathrooms with double walled mirrors. In this case, the system is made with one solid mirror, one two-way mirror, and a light source. The light source is sandwiched between the two mirrors, creating the infinite tunneling effect. The purpose of the two-way mirror is to view/display the effect from the outside. As an added effect the lights can be controlled by a micro controller, resulting in unique patterns. </p>
-        <h3>LED Array</h3>
-        <div class="picture3"></div>
-        <p>A LED display is a stack of single or multiple light strips mapped to create 2D images and/or animations. Because this typically runs off of a microcontroller the displayed animations can be manipulated by any sensor inputs. For example, frequency response (music detection), pressure sensing, near field communication sensors, skeletal tracking, displacement. For the Infinity Display system, the LED display acts as the light source. Both concepts combined, offer a unique and sometimes 3D visual experience.</p>
-        <p>More information can be found in the GitHub Developers Guide. Click the button below to learn how to use the system.</p>
+        <img src="@routes.Assets.at("images/inf3.jpg")" width="235" height="200" />
+        <p>
+          The Infinity Display is an intelligent lighting system designed from two concepts, an infinity mirror and a light emitting diode (LED) array. This system takes advantages of low power LED strips which are imbedded in the display’s frame (more on that later). These low power diodes emit a red, green and blue light intensity allowing for any combination of color scheme. Each LED is individually addressable which gives us a variety of patterns that will associate with the various user inputs. For the purposes of expanding the display’s functionality, this web application was created to entice multi-user interaction.</p>
+      </div>
+      <div class="container">
+        <h2>Infinity Mirror</h2>
+        <img src="@routes.Assets.at("images/infmir.jpg")" width="235" height="200" />
+        <p>
+          An infinity mirror is a common DIY project built on the result of an optical illusion. When two parallel mirrors are facing each other the light between them is reflected infinitely (sort of). This illusion can be found in most bathrooms with double walled mirrors. In this case, the system is made with one solid mirror, one two-way mirror, and a light source. The light source is sandwiched between the two mirrors, creating the infinite tunneling effect. The purpose of the two-way mirror is to view/display the effect from the outside. As an added effect the lights can be controlled by a micro controller, resulting in unique patterns. </p>
+      </div>
+      <div class="container">
+        <h2>LED Array</h2>
+        <img src="@routes.Assets.at("images/inf4.jpg")" width="235" height="200" />
+        <p>
+          A LED display is a stack of single or multiple light strips mapped to create 2D images and/or animations. Because this typically runs off of a microcontroller the displayed animations can be manipulated by any sensor inputs. For example, frequency response (music detection), pressure sensing, near field communication sensors, skeletal tracking, displacement. For the Infinity Display system, the LED display acts as the light source. Both concepts combined, offer a unique and sometimes 3D visual experience.</p>
+        <p>
+          More information can be found in the GitHub Developers Guide. Click the button below to learn how to use the system.</p>
 
         <button class="btn btn-default" type="button"><a href="@routes.Application.directions()">Directions</a></button>
       </div>
     </div>
+  </div>
 
-  }
+}
