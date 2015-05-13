@@ -102,3 +102,15 @@ a:hover {
   text-decoration: none;
   color: black;
 }
+
+.picture1 {
+  background-image: url('../images/inf3.jpg');
+}
+
+.picture2 {
+  background-image: url('../images/infmir.jpg');
+}
+
+.picture3 {
+  background-image: url('../images/inf4.jpg');
+}
