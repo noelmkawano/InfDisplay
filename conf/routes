@@ -5,6 +5,8 @@
 # Home page
 GET        /                    controllers.Application.index()
 GET        /live                controllers.Application.live()
+GET        /theory                controllers.Application.theory()
+GET        /directions                controllers.Application.directions()
 GET        /canvas              controllers.Application.newContact(id: Long?= 0)
 POST        /canvas          controllers.Application.postContact()
 

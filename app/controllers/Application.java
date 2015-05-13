@@ -6,9 +6,11 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import views.formdata.ContactFormData;
 import views.formdata.DietTypes;
+import views.html.Directions;
 import views.html.Index;
 import views.html.Live;
 import views.html.Canvas;
+import views.html.Theory;
 
 import java.util.Map;
 
@@ -24,6 +26,16 @@ public class Application extends Controller {
    */
   public static Result index() {
     return ok(Index.render("Welcome to the home page."));
+
+  }
+
+  public static Result theory() {
+    return ok(Theory.render("Welcome to the home page."));
+
+  }
+
+  public static Result directions() {
+    return ok(Directions.render("Welcome to the home page."));
 
   }
 

@@ -33,6 +33,8 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="@("active".when(page == "Home"))"><a href="@routes.Application.index()">Home</a></li>
+            <li class="@("active".when(page == "Theory"))"><a href="@routes.Application.theory()">Theory</a></li>
+            <li class="@("active".when(page == "Directions"))"><a href="@routes.Application.directions()">Directions</a></li>
             <li class="@("active".when(page == "Canvas"))"><a href="@routes.Application.newContact()">Canvas</a></li>
             <li class="@("active".when(page == "Live"))"><a href="@routes.Application.live()">Live</a></li>
             <li><a href="https://github.com/noelmkawano/InfDisplay">GitHub</a></li>
