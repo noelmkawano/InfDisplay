@@ -29,11 +29,19 @@ public class Application extends Controller {
 
   }
 
+  /**
+   * Returns the theory page.
+   * @return The resulting theory pag.
+   */
   public static Result theory() {
     return ok(Theory.render("Welcome to the home page."));
 
   }
 
+  /**
+   * Returns the directions page.
+   * @return The resulting directions page.
+   */
   public static Result directions() {
     return ok(Directions.render("Welcome to the home page."));
 
