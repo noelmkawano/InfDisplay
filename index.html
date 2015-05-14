@@ -1,104 +1,70 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Infdisplay : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Infdisplay</title>
+    <meta charset="UTF-8">
+    <title>Infdisplay by noelmkawano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Infdisplay</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/noelmkawano/InfDisplay" class="btn">View on GitHub</a>
+      <a href="https://github.com/noelmkawano/InfDisplay/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/noelmkawano/InfDisplay/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/noelmkawano/InfDisplay">View on GitHub</a>
+    <section class="main-content">
+      <h1>
+<a id="infdisplaycom" class="anchor" href="#infdisplaycom" aria-hidden="true"><span class="octicon octicon-link"></span></a>InfDisplay.com</h1>
 
-          <h1 id="project_title">Infdisplay</h1>
-          <h2 id="project_tagline"></h2>
+<p><a href="http://www.infdisplay.com/">InfDisplay.com</a> is a web application that allows users to manipulate the Infinity Display.</p>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/noelmkawano/InfDisplay/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/noelmkawano/InfDisplay/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+<p><img src="https://github.com/noelmkawano/InfDisplay/blob/master/public/images/images/homepage2.JPG" alt=""></p>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a id="ics-play-bootstrap" class="anchor" href="#ics-play-bootstrap" aria-hidden="true"><span class="octicon octicon-link"></span></a>ics-play-bootstrap</h1>
+<p>Want to know more about the Infinity Display?</p>
 
-<p><img src="ics-play-bootstrap-home.png" width="500px"></p>
+<ul>
+<li><a href="http://www.infdisplay.com/">Visit the InfDisplay.com page</a></li>
+<li><a href="http://noelmkawano.github.io/InfDisplay/">The InfDisplay.com project site</a></li>
+</ul>
 
 <h2>
 <a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h2>
 
-<p>This is a revised version of the Activator 'play-java' template system which:</p>
+<p>My name is Noel Kawano and I am the creator of the Infinity Display! This piece of hardware incorporates two subjects, infinity mirrors and light emitting diode (LED) matrices.</p>
 
-<ul>
-<li><p>Conforms to the ICS software engineering coding standards</p></li>
-<li><p>Illustrates how to incorporate Twitter Bootstrap 3 into Play.</p></li>
-</ul>
+<p>An infinity mirror is an optical illusion created by two parallel mirrors reflecting light between each other. This can be typically found in restrooms. Infinity mirrors is a common project for DIY hobbyists and was my first project as a college student.</p>
 
-<p>To use it, first create an empty GitHub repo and clone to your desktop.</p>
+<p>A LED matrix is an array of lights similar to a TV, but with a low pixel density. Like a TV, we are able to map images and animations to the display. This is also very popular with hobbyist, but never pursued on the large scale because of the cost.</p>
 
-<p>Next, cd into your new repo and set ics-play-bootstrap as the upstream master:</p>
+<p>The Infinity Display is a combination of these two subjects. The parallel mirrors lay on the frame with a LED display as a back light. The light from the LEDs become trapped between the mirrors and create the tunneling optical illusion of an infinity mirror.</p>
 
-<pre><code>git remote add upstream https://github.com/ics613s15/ics-play-bootstrap.git
-</code></pre>
-
-<p>Next, merge the contents of ics-play-bootstrap into your new empty repo:</p>
-
-<pre><code>git fetch upstream
-git merge upstream/master
-</code></pre>
-
-<p>Now your repo will contain the ics-play-bootstrap repo.</p>
-
-<p>Edit the build.sbt file to change the name to your new project.</p>
+<p>The goal of this repository is to develope a controller that will drive the LEDs based on inputs submitted by multiple users. If you want to know more about this web app refer to the following guides.</p>
 
 <h2>
-<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+<a id="user-guide" class="anchor" href="#user-guide" aria-hidden="true"><span class="octicon octicon-link"></span></a>User Guide</h2>
 
-<p>ics-play-bootstrap provides the following features:</p>
-
-<ul>
-<li><p>Modifications to the "play-java" Activator template to eliminate checkstyle errors.</p></li>
-<li><p>Rename view files to be capitalized (i.e. Index.scala.html, not index.scala.html). This is so that the Java class generated by these templates are capitalized, conforming to standard Java practice.</p></li>
-<li><p>Modifications to <a href="https://github.com/ics613s15/ics-play-bootstrap/blob/master/app/views/Main.scala.html">Main.scala.html</a> template to load <a href="http://getbootstrap.com/">Twitter Bootstrap 3</a> files using CDN sites.</p></li>
-<li><p>Modifications to illustrate simple page navigation through changes to the <a href="https://github.com/ics613s15/ics-play-bootstrap/blob/master/app/controllers/Application.java">controller</a>, <a href="https://github.com/ics613s15/ics-play-bootstrap/blob/master/conf/routes">routes</a>, and <a href="https://github.com/ics613s15/ics-play-bootstrap/tree/master/app/views">view</a> files.</p></li>
-<li><p>The <a href="https://github.com/ics613s15/ics-play-bootstrap/blob/master/app/views/Main.scala.html">navbar</a> highlights the current active page through a parameter passed from the controller.</p></li>
-<li><p>The <a href="https://github.com/ics613s15/ics-play-bootstrap/blob/master/public/stylesheets/main.css">main.css</a> adjusts body padding due to the use of the fixed-top navbar.</p></li>
-<li><p>Support for simple <a href="https://github.com/ics613s15/ics-play-bootstrap/blob/master/test/test/IntegrationTest.java">tests</a>.</p></li>
-</ul>
+<p>The <a href="https://github.com/noelmkawano/InfDisplay/wiki/User-Guide">User Guide</a> will help you get started with the controller. On site directions can be found <a href="http://www.infdisplay.com/directions">here</a>.</p>
 
 <h2>
-<a id="screencast" class="anchor" href="#screencast" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screencast</h2>
+<a id="developer-guide" class="anchor" href="#developer-guide" aria-hidden="true"><span class="octicon octicon-link"></span></a>Developer Guide</h2>
 
-<p>A short screencast containing a walkthrough of these features is available here.</p>
+<p>Developers wishing to contribute  to the website or build their own Infinity Display should consult the <a href="https://github.com/noelmkawano/InfDisplay/wiki/Developer-Guide">Developer Guide</a>.</p>
 
-<h2>
-<a id="version-information" class="anchor" href="#version-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version information</h2>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/noelmkawano/InfDisplay">Infdisplay</a> is maintained by <a href="https://github.com/noelmkawano">noelmkawano</a>.</span>
 
-<p>Play 2.3.7, Bootstrap 3.3.2</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Infdisplay maintained by <a href="https://github.com/noelmkawano">noelmkawano</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-    
+    </section>
 
+  
   </body>
 </html>
+
